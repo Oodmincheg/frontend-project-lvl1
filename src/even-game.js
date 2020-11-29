@@ -5,9 +5,14 @@ const ANSWER = {
   NO: 'no',
 };
 
-const RESULT = {
+const RESULT_MESSAGES = {
   CORRECT: 'Correct!',
-  INCORRECT: 'Incorrect!',
+  INCORRECT: (
+    answer,
+    correctAnswer,
+    name,
+  ) => `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \n Let's try again, ${name}!
+  `,
 };
 
 const MIN = 1;
@@ -28,7 +33,9 @@ function getRandomInt(min, max) {
 export default function evenGame() {
   const name = readlineSync.question('Sorry? May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log(`Answer "${ANSWER.YES}" if the number is even, otherwise answer "${ANSWER.NO}".`);
+  console.log(
+    `Answer "${ANSWER.YES}" if the number is even, otherwise answer "${ANSWER.NO}".`,
+  );
   let rightAnswersInRow = 0;
 
   while (rightAnswersInRow < NUM_OF_VICTORY) {
@@ -36,13 +43,14 @@ export default function evenGame() {
     const answer = readlineSync.question(`Question: ${randomNumber} `);
     if (
       (answer === ANSWER.YES && isEven(randomNumber))
-   || (answer === ANSWER.NO && !isEven(randomNumber))
+      || (answer === ANSWER.NO && !isEven(randomNumber))
     ) {
-      console.log(RESULT.CORRECT);
+      console.log(RESULT_MESSAGES.CORRECT);
       rightAnswersInRow += 1;
     } else {
-      console.log(RESULT.INCORRECT);
-      rightAnswersInRow = 0;
+      const correctAnswer = answer === ANSWER.YES ? ANSWER.NO : ANSWER.YES;
+      console.log(RESULT_MESSAGES.INCORRECT(answer, correctAnswer, name));
+      return;
     }
   }
   console.log(`Congratulations, ${name}!`);

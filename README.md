@@ -9,3 +9,7 @@
 ### Linter status:
 
 ![Lint](https://github.com/Oodmincheg/frontend-project-lvl1/workflows/Lint/badge.svg?branch=main)
+
+
+#### Linkt to asciinema for brain-event game
+https://asciinema.org/a/neSRdHCVw1ayR3g077aOVA3Nc

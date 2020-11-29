@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 
-function askNameAndSayHello() {
+function askNameSayHelloAndSave() {
   const name = readlineSync.question('Sorry? May I have your name? ');
   console.log(`Hello, ${name}!`);
+  return name;
 }
 
-export default askNameAndSayHello;
+export default askNameSayHelloAndSave;
