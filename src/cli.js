@@ -13,3 +13,8 @@ export function tellAboutGame(gamePhrase) {
 export function askRoundQuestionAndSaveAnswer(roundQuestion) {
   return readlineSync.question(roundQuestion);
 }
+
+export default function () {
+  const name = readlineSync.question('Sorry? May I have your name? ');
+  console.log(`Hello, ${name}!`);
+}
