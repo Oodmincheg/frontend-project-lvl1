@@ -11,5 +11,8 @@
 ![Lint](https://github.com/Oodmincheg/frontend-project-lvl1/workflows/Lint/badge.svg?branch=main)
 
 
-#### Linkt to asciinema for brain-event game
+#### Link to asciinema for brain-event game
 https://asciinema.org/a/neSRdHCVw1ayR3g077aOVA3Nc
+
+#### Link to asciinema for brain-calc game
+https://asciinema.org/a/Nsv7m2fxnv3V2hhHCIm5oOETP
