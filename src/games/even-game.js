@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { NUM_OF_VICTORY, MIN, MAX } from './constants.js';
-import { getRandomInt } from './utils.js';
+import { NUM_OF_VICTORY, MIN, MAX } from '../constants.js';
+import { getRandomInt } from '../utils.js';
 
 const ANSWER = {
   YES: 'yes',
