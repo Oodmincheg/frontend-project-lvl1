@@ -13,5 +13,3 @@ export function tellAboutGame(gamePhrase) {
 export function askRoundQuestionAndSaveAnswer(roundQuestion) {
   return readlineSync.question(roundQuestion);
 }
-
-export default { askRoundQuestionAndSaveAnswer, askNameSayHelloAndSave, tellAboutGame };
